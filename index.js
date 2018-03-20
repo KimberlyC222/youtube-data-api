@@ -27,19 +27,7 @@ function renderResult(result) {
 function displayYoutubeSearchData(data) {
   const results = data.items.map((item, index) => 
        renderResult(item));
-  //$('.results-title').setAttribute("role", "alert");
-  //let myAlertText = document.createTextNode("Results are listed below.");
-  //$('.results-title').appendchild(myAlertText);
-  $('.js-search-results').prop('hidden', false).html(results);
- // $('.js-search-results').append('<button id="nextButton">next</button><button id="previousButton">previous</button>');
-  //$('#nextButton').click(event => {
-  //  $('.js-search-results').empty();
-  //  data.nextPageToken.items.map((item, index));
- // });
-  //$('#previousButton').click(event => {
-  //  $('.js-search-results').empty();
-   // data.prevPageToken.items.map((item, index));
-  //});  
+  $('.js-search-results').prop('hidden', false).html("<h1 role='alert'>Results</h1>" + results);
 }
 
 
